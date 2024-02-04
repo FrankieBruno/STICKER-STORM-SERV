@@ -30,9 +30,10 @@ load_dotenv()
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['https://sticker-storm-server-bf6dcabdf16a.herokuapp.com/']
+
+ALLOWED_HOSTS = ['sticker-storm-server-bf6dcabdf16a.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -112,15 +113,9 @@ DATABASE_URL = {
 }
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd41f3jtaotrnkt',
-        'USER': 'babvrpbnafjnbk',
-        'PASSWORD': '775aff17e02c14e8f6018c76dfeb7440f04b8459e60230bcbb888bfedf9e0586',
-        'HOST': 'ec2-44-213-151-75.compute-1.amazonaws.com',
-        'PORT': '5432'
-    }
+    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
 }
+
 
 
 
