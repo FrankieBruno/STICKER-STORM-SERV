@@ -100,16 +100,29 @@ WSGI_APPLICATION = 'stickerstorm.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+DATABASE_URL = {
+    'postgres://babvrpbnafjnbk:775aff17e02c14e8f6018c76dfeb7440f04b8459e60230bcbb888bfedf9e0586@ec2-44-213-151-75.compute-1.amazonaws.com:5432/d41f3jtaotrnkt'
+}
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd41f3jtaotrnkt',
+        'USER': 'babvrpbnafjnbk',
+        'PASSWORD': '775aff17e02c14e8f6018c76dfeb7440f04b8459e60230bcbb888bfedf9e0586',
+        'HOST': 'ec2-44-213-151-75.compute-1.amazonaws.com',
+        'PORT': '5432'
     }
 }
 
 
-# Password validation
-# https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
