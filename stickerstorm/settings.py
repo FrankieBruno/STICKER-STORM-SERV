@@ -14,7 +14,6 @@ from dotenv import load_dotenv
 from pathlib import Path
 import os 
 import django_heroku
-import dj_database_url
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -33,7 +32,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 
-ALLOWED_HOSTS = ['sticker-storm-server-bf6dcabdf16a.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -63,7 +62,7 @@ REST_FRAMEWORK = {
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:3000',
     'http://127.0.0.1:3000',
-    'https://sticker-storm-server-bf6dcabdf16a.herokuapp.com/'
+    'https://stickerstorm.netlify.app'
 )
 
 MIDDLEWARE = [
@@ -108,28 +107,6 @@ DATABASES = {
     }
 }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'd41f3jtaotrnkt',
-#         'USER': 'babvrpbnafjnbk',
-#         'PASSWORD': '775aff17e02c14e8f6018c76dfeb7440f04b8459e60230bcbb888bfedf9e0586',
-#         'HOST': 'ec2-44-213-151-75.compute-1.amazonaws.com',
-#         'PORT': '5432'
-#     }
-# }
-
-DATABASE_URL = {
-    'postgres://babvrpbnafjnbk:775aff17e02c14e8f6018c76dfeb7440f04b8459e60230bcbb888bfedf9e0586@ec2-44-213-151-75.compute-1.amazonaws.com:5432/d41f3jtaotrnkt'
-}
-
-DATABASES = {
-    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
-}
-
-
-
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -161,9 +138,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 
 

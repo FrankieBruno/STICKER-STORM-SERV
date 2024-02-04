@@ -1,1 +1,1 @@
-web: gunicorn fb-stickerstorm-server-main.wsgi --log-file -
+web: gunicorn stickerstorm.wsgi --log-file -

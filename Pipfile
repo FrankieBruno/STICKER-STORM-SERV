@@ -9,11 +9,9 @@ autopep8 = "*"
 pylint = "*"
 djangorestframework = "*"
 django-cors-headers = "*"
-django-heroku = "*"
+django-on-heroku = "*"
 pylint-django = "*"
 gunicorn = "*"
-psycopg2-binary = "*"
-dj-database-url = "*"
 python-dotenv = "*"
 
 [dev-packages]
