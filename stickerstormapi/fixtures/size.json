@@ -1,0 +1,16 @@
+[
+    {
+        "model": "stickerstormapi.size",
+        "pk": 1,
+        "fields": {
+            "sticker_size": 2.5
+        }
+    },
+    {
+        "model": "stickerstormapi.size",
+        "pk": 2,
+        "fields": {
+            "sticker_size": 5
+        }
+    }
+]

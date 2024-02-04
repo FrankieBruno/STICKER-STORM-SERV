@@ -1,0 +1,23 @@
+[
+    {
+        "model": "stickerstormapi.finish",
+        "pk": 1,
+        "fields": {
+            "finish_type": "Holographic"
+        }
+    },
+    {
+        "model": "stickerstormapi.finish",
+        "pk": 2,
+        "fields": {
+            "finish_type": "Gloss"
+        }
+    },
+    {
+        "model": "stickerstormapi.finish",
+        "pk": 3,
+        "fields": {
+            "finish_type": "Matte"
+        }
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "model": "stickerstormapi.order",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "created_date": "2023-06-12",
+            "completed_date": "2023-07-20",
+            "order_sticker": [1],
+            "quantity": 2,
+            "total": 1
+        }
+    },
+    {
+        "model": "stickerstormapi.order",
+        "pk": 2,
+        "fields": {
+            "user": 1,
+            "created_date": "2023-06-12",
+            "completed_date": "2023-07-20",
+            "order_sticker": [2],
+            "quantity": 1,
+            "total": 1
+        }
+    }
+]
