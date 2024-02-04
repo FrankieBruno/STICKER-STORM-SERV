@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from dotenv import load_dotenv
 from pathlib import Path
 import os 
-import django_heroku
+import django_on_heroku
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -149,4 +149,4 @@ STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-django_heroku.settings(locals())
+django_on_heroku.settings(locals())
